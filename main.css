@@ -1,0 +1,97 @@
+:root {
+    --primary: #6366f1;
+    --secondary: #ec4899;
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f8fafc;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 350px;
+}
+
+h1 span {
+    color: var(--primary);
+    font-size: 0.8rem;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* BUTTONS */
+.btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-secondary { background: #334155; color: white; }
+
+.btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
+
+/* THE BOARD */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 1.5rem 0;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    background: #334155;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cell:hover:not(.taken) {
+    background: #475569;
+}
+
+.cell.taken { cursor: default; }
+
+/* SCOREBOARD */
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.score-card {
+    background: #0f172a;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+}

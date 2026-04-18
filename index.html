@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe AI</title>
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Tic Tac Toe</h1>
+
+    <div id="modeScreen">
+        <h2>Select Game Mode</h2>
+        <button id="pvp" class="btn-primary">Player vs Player</button>
+        <button id="ai" class="btn-primary">Player vs AI</button>
+
+        <div id="difficultySettings" class="hidden">
+            <h3>Select Difficulty</h3>
+            <select id="difficultyLevel">
+                <option value="easy">Easy (Random)</option>
+                <option value="medium">Medium (Tactical)</option>
+                <option value="hard" selected>Hard (Unbeatable)</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="gameUI" class="hidden">
+        <div class="scoreboard">
+            <div class="score-card">X Wins: <span id="xScore">0</span></div>
+            <div class="score-card">Draws: <span id="drawScore">0</span></div>
+            <div class="score-card">O Wins: <span id="oScore">0</span></div>
+        </div>
+
+        <div class="game-layout">
+            <div id="game" class="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="history-panel">
+                <h3>Move History</h3>
+                <div id="historyList"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="reset" class="btn-secondary">New Round</button>
+            <button id="mainMenu" class="btn-secondary">Main Menu</button>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="src/uiHandler.js"></script>
+</body>
+</html>
