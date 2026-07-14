@@ -44,7 +44,6 @@ function makeMove(index, player) {
         gameOver = true;
         scores[player]++;
         // Trigger CSS Animation
-        winLine.forEach(idx => cells[idx].classList.add("winner"));
         updateUI(`${player} Wins!`);
     } else if (isDraw(board)) {
         gameOver = true;
