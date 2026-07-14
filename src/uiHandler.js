@@ -43,7 +43,7 @@ function makeMove(index, player) {
     if (winLine) {
         gameOver = true;
         scores[player]++;
-        // Trigger CSS Animation
+       
         updateUI(`${player} Wins!`);
     } else if (isDraw(board)) {
         gameOver = true;
