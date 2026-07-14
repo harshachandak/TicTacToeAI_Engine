@@ -1,4 +1,4 @@
-import { checkWin, isDraw, minimax, getRandomMove } from './gameLogic.js';
+import { checkWin, isDraw, minimax, getWinningLine, getRandomMove } from './gameLogic.js';
 
 // --- 1. ENHANCED STATE ---
 let board = Array(9).fill("");
