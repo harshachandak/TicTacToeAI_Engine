@@ -44,6 +44,15 @@ export function minimax(board, depth, isMaximizing) {
     }
 }
 
+export function getWinningLine(board) {
+    for (let pattern of winPatterns) {
+        const [a, b, c] = pattern;
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+            return pattern; // Returns the [0, 1, 2] etc.
+        }
+    }
+    return null;
+}
 
 export function getRandomMove(board) {
     const available = board.map((v, i) => v === "" ? i : null).filter(v => v !== null);
